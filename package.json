@@ -1,0 +1,31 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1149308443/nodeJS.git"
+  },
+  "author": "wuweixing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1149308443/nodeJS/issues"
+  },
+  "homepage": "https://github.com/1149308443/nodeJS#readme",
+  "dependencies": {
+    "koa": "^2.12.0",
+    "koa-router": "^8.0.8"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.3",
+    "@types/koa-router": "^7.4.1",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.3"
+  }
+}
