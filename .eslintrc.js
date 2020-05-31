@@ -62,7 +62,7 @@ module.exports = {
     'no-invalid-this': 2, // 禁止无效的this，只能用在构造器，类，对象字面量
     'no-redeclare': 2, // 禁止重复声明变量
     'no-spaced-func': 2, // 函数调用时 函数名与()之间不能有空格
-    'no-undef': 2, // 不能有未定义的变量
+    // 'no-undef': 2, // 不能有未定义的变量
     'no-use-before-define': 2, // 未定义前不能使用
     camelcase: 2, // 强制驼峰法命名
     'accessor-pairs': 'error', // 定义对象的set存取器属性时，强制定义get
@@ -71,7 +71,7 @@ module.exports = {
     'array-element-newline': ['error', { multiline: true }], // 该规则强制数组元素之间的换行符。使用多行强制换行，单行不换行
     'block-scoped-var': 'error', // 变量在定义块的外部使用时，规则会生成警告。这模拟了C风格的块范围。
     'block-spacing': 'error', // 规则在打开的块令牌内和同一行上的下一个令牌内强制执行一致的间距。此规则还会在同一行中的关闭块标记和以前的标记内强制实施一致的间距。
-    'callback-return': 'error', // 规则旨在确保在主功能块外部使用的回调始终是在return语句之前的部分或之前
+    // 'callback-return': 'error', // 规则旨在确保在主功能块外部使用的回调始终是在return语句之前的部分或之前
     'capitalized-comments': ['error'], // 此规则在注释开始时将需要非小写字母
     'comma-dangle': ['error', 'never'], // Always-multiline：多行模式必须带逗号，单行模式不能带逗号
     // 控制逗号前后的空格
@@ -175,7 +175,7 @@ module.exports = {
     'no-octal-escape': 2, // 不允许字符串文字中的八进制转义序列
     'no-param-reassign': 2, // 防止由功能参数的修改或重新分配引起的意外行为
     'no-path-concat': 2, // 防止 Node.js 中的目录路径字符串连接
-    'no-process-env': 2, // 阻止使用process.env以避免全局依赖
+    // 'no-process-env': 0, // 阻止使用process.env以避免全局依赖
     'no-process-exit': 0, // 防止process.exit()在 Node.js JavaScript 中使用
     'no-proto': 2,
     'no-regex-spaces': 2, // 规则在正则表达式文字中不允许有多个空格
@@ -190,8 +190,8 @@ module.exports = {
     'no-sync': 2, // 防止在 Node.js 中调用同步方法
     'no-ternary': 0, // 不允许三元运算符
     'no-throw-literal': 2, // 不允许抛出不可能是Error对象的文字和其他表达式来抛出异常时保持一致性
-    'no-undef-init': 2, // 消除初始化为的变量声明undefined
-    'no-undefined': 2, // 消除使用undefined，并因此在使用时发出警告
+    // 'no-undef-init': 2, // 消除初始化为的变量声明undefined
+    // 'no-undefined': 2, // 消除使用undefined，并因此在使用时发出警告
     'no-unexpected-multiline': 2, // 不允许混淆多行表达式，换行符看起来像是结束语句，但不是
     'no-unneeded-ternary': 2, // 当存在更简单的选择时，此规则不允许三元运算符
     'no-unused-expressions': 2,
