@@ -296,7 +296,8 @@ module.exports = {
       }
     ],
     '@typescript-eslint/no-explicit-any': 1, // Any类型时的警告报错
-    '@typescript-eslint/interface-name-prefix': 0 // 关闭接口不能以 I 为前缀
+    '@typescript-eslint/interface-name-prefix': 0, // 关闭接口不能以 I 为前缀
+    '@typescript-eslint/ban-types': 0 // 接口不能定义object类型
 
     // ////////////
     // Typescript.相关  end//
