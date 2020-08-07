@@ -20,8 +20,8 @@ const UserModel = {
     allowNull: true
   },
   mobile: {
-    type: DataTypes.INTEGER,
-    allowNull: false
+    type: DataTypes.BIGINT,
+    allowNull: true
   },
   gender: {
     type: DataTypes.STRING(35),
@@ -33,7 +33,7 @@ const UserModel = {
   },
   password: {
     type: DataTypes.STRING(255),
-    allowNull: false
+    allowNull: true
   }
 };
 

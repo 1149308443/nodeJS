@@ -1,4 +1,7 @@
+import path from 'path';
+import fs from 'fs';
 import { Sequelize, Utils, Model } from 'sequelize';
+import { TModels } from './typings';
 
 export interface ISUtil {
   db: string;
@@ -61,7 +64,38 @@ export default class SequelizeUtil {
    * @returns {Models} 表模型Model
    */
   public defineModel(name:string, attributes:IAttributes, options?:IOptions): typeof Model {
+    // const modelDir = path.resolve(__dirname, '../models');
+    // const dirs: anyKey = fs.readdirSync(modelDir);
+
     return this.sequelizeManager.define(name, attributes, options);
+  }
+
+  // public registryModels ():void {
+  //   const modelDir = path.resolve(__dirname, '../models');
+  //   const dirs: anyKey = fs.readdirSync(modelDir);
+
+  //   for (const key in dirs) {
+  //     const name: string = dirs[key].replace(/.[j|t]s$/, '');
+  //     const filepath = path.resolve(modelDir, dirs[key]);
+  //     const file = require(filepath);
+  //     // const STATICS = file['Statics']
+  //     const MODELS = file.Models;
+  //     const OPTIONS = file.Options;
+
+  //     this.models[name] = this.sequelizeManager.define(name, MODELS, OPTIONS);
+
+  //     return this.models;
+  //   }
+  // }
+
+  /**
+   *  @description 动态创建数据库Models
+   * @param {string} path 加载Models文件夹路径
+   * @param {RegExp} match 加载path路径下的文件匹配正则表达式
+   * @returns {Object} Models 对象
+  */
+  public dynamicSqlModels(): TModels {
+    return this.sequelizeManager.models;
   }
 
   /**
@@ -77,4 +111,5 @@ export default class SequelizeUtil {
       }
     });
   }
+
 }

@@ -1,6 +1,6 @@
 import { Sequelize } from '../utils';
 import config from '../config';
-import User from './user';
+import User from './User';
 
 const { DB, USER, PASSWORD, HOST, PORT } = config.MYSQL_CONFIG;
 const sequelize = new Sequelize({
@@ -13,6 +13,8 @@ const sequelize = new Sequelize({
 
 sequelize.defineModel('user', User);
 
-// Sequelize.synchronize();
+export const models = sequelize.dynamicSqlModels();
+
+// sequelize.synchronize();
 
 export default sequelize;

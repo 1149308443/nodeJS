@@ -72,7 +72,7 @@ module.exports = {
     'block-scoped-var': 'error', // 变量在定义块的外部使用时，规则会生成警告。这模拟了C风格的块范围。
     'block-spacing': 'error', // 规则在打开的块令牌内和同一行上的下一个令牌内强制执行一致的间距。此规则还会在同一行中的关闭块标记和以前的标记内强制实施一致的间距。
     // 'callback-return': 'error', // 规则旨在确保在主功能块外部使用的回调始终是在return语句之前的部分或之前
-    'capitalized-comments': ['error'], // 此规则在注释开始时将需要非小写字母
+    'capitalized-comments': 'off', // 此规则在注释开始时将需要非小写字母
     'comma-dangle': ['error', 'never'], // Always-multiline：多行模式必须带逗号，单行模式不能带逗号
     // 控制逗号前后的空格
     'comma-spacing': [
@@ -108,7 +108,7 @@ module.exports = {
         after: true
       }
     ],
-    'guard-for-in': 2, // 此规则旨在防止使用for in循环而不过滤循环中的结果时可能出现的意外行为
+    'guard-for-in': 0, // 此规则旨在防止使用for in循环而不过滤循环中的结果时可能出现的意外行为
     'global-require': 2, // 此规则要求所有调用require()都位于模块的顶层
     'handle-callback-err': [2, '^(err|error)$'], // 这个规则期望当你在 Node.js 中使用回调模式时，你会处理这个错误
     // 此规则强制在对象字面量属性中的键和值之间保持一致的间距

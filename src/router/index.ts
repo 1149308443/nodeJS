@@ -1,10 +1,29 @@
 
 import Router from 'koa-router';
-// Import { ParameterizedContext } from 'koa';
+import { ParameterizedContext } from 'koa';
+import { models } from '../models';
+const { user } = models;
 const router = new Router();
 
 router.get('/', (ctx) => {
   ctx.body = 'Hello World';
+});
+
+router.get('/user', async (ctx: ParameterizedContext) => {
+  const params = ctx.query;
+
+  console.log('hhhhhhhhhh', ctx.cookies);
+
+  const cook = ctx.cookies.get('ycas_token');
+
+  console.log('ccccccc', cook);
+
+  const res = await user.create({
+    ...params
+  });
+
+  ctx.body = res;
+
 });
 
 // 未知路由
