@@ -187,7 +187,7 @@ module.exports = {
     'no-shadow': 2, // 该规则旨在消除阴影变量声明
     'no-shadow-restricted-names': 2,
     'no-sparse-arrays': 2, // 不允许稀疏数组文字
-    'no-sync': 2, // 防止在 Node.js 中调用同步方法
+    'no-sync': 0, // 防止在 Node.js 中调用同步方法
     'no-ternary': 0, // 不允许三元运算符
     'no-throw-literal': 2, // 不允许抛出不可能是Error对象的文字和其他表达式来抛出异常时保持一致性
     // 'no-undef-init': 2, // 消除初始化为的变量声明undefined

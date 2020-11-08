@@ -64,8 +64,13 @@ export default class SequelizeUtil {
    * @returns {Models} 表模型Model
    */
   public defineModel(name:string, attributes:IAttributes, options?:IOptions): typeof Model {
-    // const modelDir = path.resolve(__dirname, '../models');
-    // const dirs: anyKey = fs.readdirSync(modelDir);
+    const modelDir = path.resolve(__dirname, '../models');
+
+    console.log(modelDir);
+
+    const dirs = fs.readdirSync(modelDir);// 返回一个包含“指定目录下所有文件名称”的数组对象。
+
+    console.log(dirs);
 
     return this.sequelizeManager.define(name, attributes, options);
   }

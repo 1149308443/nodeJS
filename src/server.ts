@@ -7,12 +7,12 @@ import bodyParser from 'koa-bodyparser';
 import Moment from 'moment';
 import config from './config';
 import router from './router';
-import models from './models';
+import mysql from './mysql';
 
 const app = new Koa();
 
 // 数据库连接
-models.init();
+mysql.init();
 
 // 使用日志中间件 koa-logger
 app.use(logger((str) => {

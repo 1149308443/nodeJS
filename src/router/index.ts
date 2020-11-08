@@ -1,7 +1,7 @@
 
 import Router from 'koa-router';
 import { ParameterizedContext } from 'koa';
-import { models } from '../models';
+import { models } from '../mysql';
 const { user } = models;
 const router = new Router();
 
